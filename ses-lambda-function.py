@@ -10,10 +10,10 @@ def lambda_handler(event, context):
     bucket_name = event['Records'][0]['s3']['bucket']['name']
     
     response = ses.send_email(
-        FromEmailAddress = "irshathmohamed786@gmail.com",
+        FromEmailAddress = "your_email",
         Destination={
             'ToAddresses':[
-                'irshathmohamed786@gmail.com']
+                'receiver_email']
         },
         Content={
             'Simple':{
